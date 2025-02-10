@@ -1,4 +1,5 @@
 import demoji as emoji
+import pandas as pd
 import re
 
 def remove_emo(text):
@@ -21,3 +22,14 @@ def remove_punctuation(text):
 def lower_case (text):
     lower_text = text.lower()
     return lower_text
+
+def total_data_cleaning(text):
+    text = remove_emo(text)
+    text = remove_urls(text)
+    text = remove_email_and_username
+    text = remove_punctuation(text)
+    text = lower_case(text)
+    return text
+
+print("DỮ LIỆU ĐẦU VÀO:")
+data_raw = pd.read_csv('data/data_raw.csv')
